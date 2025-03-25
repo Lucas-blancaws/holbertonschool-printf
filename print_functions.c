@@ -1,6 +1,6 @@
 #include "main.h"
 
-int print_char(va_list args)
+/*int print_char(va_list args)
 {
 
 }
@@ -8,7 +8,7 @@ int print_char(va_list args)
 int print_string(va_list args)
 {
 
-}
+*/
 
 /**
  * print_percent - Prints a '%' character.
@@ -22,9 +22,48 @@ int print_percent(va_list args)
 	return (_putchar('%'));
 }
 
+/**
+ * print_decimal - Prints an integer in decimal format.
+ * @args: The va_list containing the integer to print.
+ *
+ * Return: The number of characters printed.
+ */
 int print_decimal(va_list args)
 {
+	int n = va_arg(args, int);
+	unsigned int num;
+	int count = 0;
+	int digits[10];
+	int i = 0;
 
+	if (n < 0)
+	{
+		count += _putchar('-');
+		num = -n;
+	}
+	else
+	{
+		num = n;
+	}
+
+	if (num == 0)
+	{
+		count += _putchar('0');
+		return (count);
+	}
+
+	while (num > 0)
+	{
+		digits[i++] = num % 10;
+		num /= 10;
+	}
+
+	while (i > 0)
+	{
+		count += _putchar('0' + digits[--i]);
+	}
+
+	return (count);
 }
 
 /**
