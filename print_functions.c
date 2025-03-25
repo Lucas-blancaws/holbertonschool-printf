@@ -4,10 +4,12 @@ int print_char(va_list args)
 {
 
 }
+
 int print_string(va_list args)
 {
 
 }
+
 /**
  * print_percent - Prints a '%' character.
  * @args: The va_list (not used in this function).
@@ -19,10 +21,12 @@ int print_percent(va_list args)
 	(void)args;
 	return (_putchar('%'));
 }
+
 int print_decimal(va_list args)
 {
 
 }
+
 /**
  * print_int - Prints an integer using print_decimal.
  * @args: The va_list containing the integer to print.
