@@ -8,7 +8,6 @@
  */
 int (*get_formatter(char spec))(va_list)
 {
-
 	format_t formats[] = {
 		{'c', print_char},
 		{'s', print_string},
@@ -20,7 +19,6 @@ int (*get_formatter(char spec))(va_list)
 
 	int i = 0;
 
-
 	while (formats[i].spec)
 	{
 		if (formats[i].spec == spec)
@@ -28,5 +26,5 @@ int (*get_formatter(char spec))(va_list)
 		i++;
 	}
 
-    return (NULL);
+	return (NULL);
 }

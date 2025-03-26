@@ -9,8 +9,8 @@
 
 typedef struct format_specifier
 {
-    const char spec;
-    int (*func)(va_list args);
+	const char spec;
+	int (*func)(va_list args);
 } format_t;
 
 
