@@ -1,14 +1,38 @@
 #include "main.h"
 
-/*int print_char(va_list args)
+/**
+ * print_char - Function to print a single letter
+ * @args: va_list containing the argument for the letter
+ *
+ * Return: Number of characters printed (1)
+ */
+int print_char(va_list args)
 {
+	char c = va_arg(args, int);
 
+	return (_putchar(c));
 }
 
+/**
+ * _print_string - Affiche une chaîne de aractère
+ * @args: Liste d'arguments contenant la chaîn a afficher
+ * Cette fonction récupère la chae de la liste d'arguments et l'affiche
+ * en appelant `_write_string`
+ * Return: nb de caractères imprim (dépend de la longueur de la caine)
+ */
 int print_string(va_list args)
 {
+    char *str = va_arg(args, char *);
+    int count = 0;
 
-*/
+    if (!str)
+        str = "(null)";
+
+    while (*str)
+        count += _putchar(*str++);
+
+    return (count);
+}
 
 /**
  * print_percent - Prints a '%' character.
