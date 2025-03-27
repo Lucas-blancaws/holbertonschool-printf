@@ -73,6 +73,7 @@ int main(void)
     _printf("Hello, %s! Your score is %d.\n", "Alice", 42);
     return (0);
 }
+Output: Hello, Alice! Your score is 42
 .fi
 
 .SH AUTHORS
@@ -80,12 +81,10 @@ This project was created as part of the Holberton School curriculum.
 
 Lucas Blancportier  
 GitHub: https://github.com/Lucas-blancaws  
-Email:   
+Email: lblancportier@gmail.com
 
 .B Haggui RAZAFIMAITSO  
 GitHub: https://github.com/hagguishel  
 Email: hagguirzt@gmail.com  
 
-.SH SEE ALSO
 .B printf(3)
-
