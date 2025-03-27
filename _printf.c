@@ -31,7 +31,10 @@ int _printf(const char *format, ...)
 			else
 			{
 				printed_chars += _putchar('%');
+				if (format[i] != '\0')
 				printed_chars += _putchar(format[i]);
+				else
+				return (-1);
 			}
 		}
 		else
