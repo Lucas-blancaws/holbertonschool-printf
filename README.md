@@ -77,15 +77,13 @@ _printf("Percent sign: %%\n");
 
 ## 📂 Project Files
 
-| File             | Description |
-|-----------------|-------------|
-| `main.h`        | Header file containing function prototypes and type definitions. |
-| `_printf.c`     | Main function implementing `_printf`. |
-| `print_char.c`  | Handles the `%c` format specifier. |
-| `print_string.c`| Handles the `%s` format specifier. |
-| `print_number.c`| Handles `%d` and `%i` format specifiers. |
-| `utils.c`       | Contains helper functions like `_putchar`. |
-| `man_3_printf`  | Manual page describing `_printf`. |
+| File              | Description |
+|------------------|-------------|
+| `main.h`         | Header file containing function prototypes and type definitions. |
+| `_printf.c`      | Main function implementing `_printf`. |
+| `print_function.c` | Handles `%c`, `%s`, `%d`, and `%i` format specifiers. |
+| `utils.c`        | Contains helper functions like `_putchar`. |
+| `man_3_printf`   | Manual page describing `_printf`. |
 
 ---
 
