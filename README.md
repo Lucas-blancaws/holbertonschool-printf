@@ -98,6 +98,11 @@ The `_printf` function follows a modular approach:
 
 ---
 
+- ## 🗺️ Flowchart
+- ![Diagramme de flux](https://github.com/user-attachments/assets/7f1bfa2a-111c-46fc-847f-b0ebd9fe9b66)
+
+---
+
 ## 📖 Man Page
 
 To view the manual page for `_printf`, run:
