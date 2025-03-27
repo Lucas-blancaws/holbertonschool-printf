@@ -7,6 +7,13 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+/**
+ * struct format_specifier - Defines a format specifier for printf function.
+ *
+ * Maps a format specifier character to a function that processes it.
+ * @spec : The format specifier (e.g., 'c', 's', 'd', etc.)
+ * @func : Pointer to the get_formatter function.
+ */
 typedef struct format_specifier
 {
 	const char spec;

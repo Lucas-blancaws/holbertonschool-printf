@@ -14,7 +14,7 @@ int print_char(va_list args)
 }
 
 /**
- * _print_string - Affiche une chaîne de aractère
+ * print_string - Affiche une chaîne de aractèr
  * @args: Liste d'arguments contenant la chaîn a afficher
  * Cette fonction récupère la chae de la liste d'arguments et l'affiche
  * en appelant `_write_string`
@@ -22,16 +22,16 @@ int print_char(va_list args)
  */
 int print_string(va_list args)
 {
-    char *str = va_arg(args, char *);
-    int count = 0;
+	char *str = va_arg(args, char *);
+	int count = 0;
 
-    if (!str)
-        str = "(null)";
+	if (!str)
+		str = "(null)";
 
-    while (*str)
-        count += _putchar(*str++);
+	while (*str)
+		count += _putchar(*str++);
 
-    return (count);
+	return (count);
 }
 
 /**
