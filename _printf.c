@@ -30,9 +30,11 @@ int _printf(const char *format, ...)
 			printed_chars += func(args);
 			else
 			{
-				printed_chars += _putchar('%');
 				if (format[i] != '\0')
-				printed_chars += _putchar(format[i]);
+				{
+					printed_chars += _putchar('%');
+					printed_chars += _putchar(format[i]);
+				}
 				else
 				return (-1);
 			}
