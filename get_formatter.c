@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * get_formatter - Trouve la fonction correspondant à un spécificateur
- * @spec: Le spécificateur de format (ex: 'c', 's', 'd', etc.)
+ * get_formatter - Finds the function corresponding to a specifier
+ * @spec: The format specifier (e.g., 'c', 's', 'd', etc.)
  *
- * Return: Pointeur vers la fonction de formatage correspondante, NULL sinon.
+ * Return: Pointer to the corresponding formatting function, NULL otherwise.
  */
 int (*get_formatter(char spec))(va_list)
 {

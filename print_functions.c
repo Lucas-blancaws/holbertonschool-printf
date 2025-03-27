@@ -14,11 +14,11 @@ int print_char(va_list args)
 }
 
 /**
- * print_string - Affiche une chaîne de aractèr
- * @args: Liste d'arguments contenant la chaîn a afficher
- * Cette fonction récupère la chae de la liste d'arguments et l'affiche
- * en appelant `_write_string`
- * Return: nb de caractères imprim (dépend de la longueur de la caine)
+ * print_string - Displays a string of characters
+ * @args: List of arguments containing the string to be displayed
+ * This function retrieves the string from the argument list and displays it
+ * by calling `_write_string`
+ * Return: Number of characters printed (depends on the length of the string)
  */
 int print_string(va_list args)
 {

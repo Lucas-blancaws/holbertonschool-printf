@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
- * _printf - Fonction qui copie le vrai printf
- * @format: La chaîne de format contenant les spécificateurs
- * Return: Le nombre total de caractères imprimés (hors '\0')
+ * _printf - Function that mimics the real printf
+ * @format: The format string containing the specifiers
+ * Return: The total number of characters printed (excluding '\0')
  */
 
 int _printf(const char *format, ...)
