@@ -5,6 +5,13 @@
 #include  <unistd.h>
 #include <stdlib.h>
 
+/**
+ * typedef printer_f - pointer to a print handler function
+ * @ap: active variadic argument list
+ *
+ * Each handler prints to STDOUT and returns number of characters printed,
+ * or -1 on error.
+ */
 typedef int (*printer_f)(va_list ap);
 
 /**
@@ -18,7 +25,18 @@ typedef struct format_spec
     printer_f fn;
 } fmt_t;
 
-/* ========= PROTOTYPES ========= */
+/* ========== Core ========= */
 int _printf(const char *format, ...);
+printer_f get_handler(char spec);
+
+/* ========== Handlers ========= */
+int print_char(va_list ap);
+int print_string(va_list ap);
+int print_percent(va_list ap);
+
+/* ========== Output Utilities ========= */
+int _putchar(char c);
+int _puts(const char *s);
+int _strlen(const char *s);
 
 #endif
