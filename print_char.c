@@ -1,3 +1,5 @@
+#include <stdarg.h>
+#include <unistd.h>
 #include "main.h"
 
 int print_char(va_list args)
