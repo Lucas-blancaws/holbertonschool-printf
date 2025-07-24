@@ -1,0 +1,78 @@
+TH _PRINTF 3 "July 2025" "Holberton School" "_PRINTF MANUAL"
+.SH NAME
+_printf \- custom implementation of the printf function
+.SH SYNOPSIS
+.nf
+.B #include "main.h"
+.BI "int _printf(const char *format, ...);"
+.fi
+.SH DESCRIPTION
+The
+.B _printf
+function produces output according to a specified
+.I format
+string and additional arguments. It mimics the behavior of the standard library's
+.B printf
+function but with a limited set of specifiers and functionalities.
+The
+.I format
+string can contain plain text and format specifiers. Text is printed as-is, while format specifiers are replaced with the values of the provided arguments.
+Format specifiers begin with a '%' character and are followed by a specifier character.
+.SS Supported Specifiers
+The following specifiers are supported:
+.TP
+.B %c
+Prints a single character.
+.TP
+.B %s
+Prints a null-terminated string.
+.TP
+.B %d, %i
+Prints a signed decimal integer.
+.TP
+.B %%
+Prints a literal '%' character.
+.SS Limitations
+This implementation does not support:
+- Flags such as '+', '-', or '0'.
+- Field width specifications (e.g., `%5d`).
+- Precision control (e.g., `%.2f` or `%.3s`).
+- Length modifiers such as 'l', 'h', or 'll'.
+- The `%r` specifier is currently not implemented.
+.SH COMPILATION
+To compile a program using
+.B _printf
+, include the necessary source files and compile with:
+.nf
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o program_name
+.fi
+.SH RETURN VALUE
+The
+.B _printf
+function returns the number of characters printed (excluding the null byte used to end output to strings). If an error occurs, it returns -1.
+.SH EXAMPLES
+.B Simple usage:
+.nf
+#include "main.h"
+int main(void)
+{
+  _printf("Hello, %s! Your score is %d.\n", "Alice", 42);
+  return (0);
+}
+Output: Hello, Alice! Your score is 42
+.fi
+.SH AUTHORS
+This project was created as part of the Holberton School curriculum.
+.B Lucas Blanc-Portier
+GitHub: https://github.com/Lucas-blancaws
+Email: lblancportier@gmail.com
+.B Sunny Pritchard
+ GitHub (https://github.com/sunnypritchard)
+ Email pritchardsunny@gmail.com
+.B printf(3)
+
+
+
+
+
+
