@@ -1,5 +1,3 @@
-#include <stdarg.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * print_char - Prints a single character to standard output
