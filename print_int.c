@@ -47,4 +47,3 @@ int print_int(va_list ap)
 	int n = va_arg(ap, int);
 	return (print_number(n));
 }
-
