@@ -11,6 +11,8 @@ int (*get_formatter(char spec))(va_list)
 		{'c', print_char},
 		{'%', print_percent},
 		{'s', print_string},
+		{'d', print_int},
+		{'i', print_int},
 		{0, NULL}
 	};
 
