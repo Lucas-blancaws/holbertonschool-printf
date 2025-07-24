@@ -172,6 +172,3 @@ valgrind --leak-check=full --track-origins=yes ./_printf
   - [GitHub] (https://github.com/sunnypritchard)
   - [Email] (pritchardsunny@gmail.com)
 
----
-
-## 🔗 References
