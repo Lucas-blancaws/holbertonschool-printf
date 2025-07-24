@@ -26,6 +26,7 @@ int print_number(int n)
 	if (num / 10)
 	{
 		int tmp = print_number(num / 10);
+
 		if (tmp == -1)
 			return (-1);
 		count += tmp;
@@ -45,5 +46,6 @@ int print_number(int n)
 int print_int(va_list ap)
 {
 	int n = va_arg(ap, int);
+
 	return (print_number(n));
 }
