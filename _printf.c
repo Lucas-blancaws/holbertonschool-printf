@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+* _printf - Produces output according to a format
+* @format: Format string
+*
+* Return: Number of characters printed, or -1 on error
+*/
+
 int _printf(const char *format, ...)
 {
 	va_list args;
@@ -19,26 +26,26 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '\0')
+			{
+				va_end(args);
+				return (-1);
+			}
 			func = get_formatter(format[i]);
 			if (func)
 			count += func(args);
 			else
 			{
-				if (format[i] != '\0')
-				{
-					count += _putchar('%');
-					count += _putchar(format[i]);
-				}
-				else
-				return (-1);
+				count += _putchar('%');
+				count += _putchar(format[i]);
 			}
 		}
-        else
-        {
-        count += _putchar(format[i]);
-        }
-        i++;
-    }
-    va_end(args);
-    return(count);
+		else
+		{
+			count += _putchar(format[i]);
+		}
+		i++;
+	}
+	va_end(args);
+	return (count);
 }

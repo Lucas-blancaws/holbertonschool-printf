@@ -6,8 +6,8 @@
 
 typedef struct format
 {
-    char spec;
-    int (*func)(va_list);
+	char spec;
+	int (*func)(va_list);
 } format_t;
 
 int print_char(va_list args);
